@@ -26,7 +26,7 @@ sections.forEach( (section) => {
 
 
    let a = document.createElement('a');
-   a.setAttribute('href', `#${id}`);
+   a.setAttribute('data-link', id);
    a.innerText  = link_text;
 
 
@@ -84,7 +84,7 @@ function getActiveLink(sec) {
 function checkActive() {
   secActive.forEach( (sec) => { 
     rect = sec.getBoundingClientRect();
-    let plus = 5  + rect.bottom - window.innerHeight;  
+    let plus = 1  + rect.bottom - window.innerHeight;  
     if (rect.top >= 0 
       &&  rect.left >= 0 
       && rect.bottom <= (window.innerHeight + plus) 

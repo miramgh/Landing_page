@@ -83,8 +83,8 @@ section {
 
 .navbar__menu .menu__link {
     display: inline;
-    padding: 1rem;
-    font-weight: bold;
+    padding: 0.5rem;
+    font-weight: lighter;
     text-decoration: none;
     color: #fff;
 }
@@ -92,16 +92,19 @@ a{
     text-decoration:none;
     background-color: transparent;
     color:#fff;
+    font-size:15px;
 }
 .active__link{
-    background-color:  rgba(0, 13, 60, 1);
-    padding:16px;
+    border:1px solid #fff;
     color: rgb(248, 247, 247);
     font-weight: italic;   
+    padding:2px;
+
 }
 
-.navbar__menu .menu__link:hover {
-    background:  rgba(0,13,60,1);
+a:hover {
+    padding:5px;
+    border: 1px solid #fff;
     color: #fff;
     transition: ease 0.3s all;
 }
@@ -141,6 +144,28 @@ html{
     .landing__container {
         max-width: 50em;
         padding: 4em;
+    }
+}
+
+@media only screen and (max-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+    .menu__link{
+        font-size: 10px;
+    }
+    .active__link{
+        border: 1px solid rgb(253, 252, 252);
+    }
+    .navbar__menu ul {
+        padding-left: 0;
+        margin: 0;
+        text-align: center;
+        background-color:  rgba(0,13,60,0.8) ;
+        padding: 5 px;
+        scrollbar-shadow-color: rgba(0, 6, 27, 0.6);
+    
     }
 }
 
